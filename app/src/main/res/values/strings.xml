@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">CalculatorText</string>
+    <string name="app_name">Text Calculator</string>
+    <string name="input_hint">Įveskite tekstą</string>
+    <string name="calculate">Skaičiuoti</string>
+    <string name="result">Rezultatas: </string>
+    <string name="empty_input">Neįvestas tekstas!</string>
+    <string name="result_format">Rezultatas: %1$d</string>
+
+    <string-array name="metric_options">
+        <item>Sakiniai</item>
+        <item>Žodžiai</item>
+        <item>Skyrybos ženklai</item>
+        <item>Skaičiai</item>
+    </string-array>
 </resources>

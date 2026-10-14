@@ -10,7 +10,7 @@
         android:id="@+id/editTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="irasykit teksta"
+        android:hint="@string/input_hint"
         android:inputType="textMultiLine"
         android:gravity="top"
         android:minLines="5" />
@@ -18,19 +18,20 @@
     <Spinner
         android:id="@+id/spinnerMetric"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:entries="@array/metric_options"/>
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="skaiciuot" />
+        android:text="@string/calculate" />
 
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rezultatas"
+        android:text="@string/result"
         android:textSize="20sp"
         android:paddingTop="20dp" />
 
