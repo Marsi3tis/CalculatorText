@@ -10,7 +10,7 @@ public class TextCalculator {
 
         for (String sentence : sentences){
             if(!sentence.trim().isEmpty()){
-                count++
+                count++;
             }
         }
         return count;
@@ -44,7 +44,7 @@ public class TextCalculator {
         while(matcher.find()){
             count++;
         }
-        count++;
+        return count;
     }
 
 }
