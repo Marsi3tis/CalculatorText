@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.text.Editable;
+import android.text.TextWatcher;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,11 +31,28 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerMetric = findViewById(R.id.spinnerMetric);
         Button buttonCalculate = findViewById(R.id.buttonCalculate);
         TextView textViewResult = findViewById(R.id.textViewResult);
+        editTextInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                textViewResult.setText(R.string.result);
+            }
+        });
 
         TextCalculator textCalculator = new TextCalculator();
         buttonCalculate.setOnClickListener(view -> {
-            String text = editTextInput.getText().toString();
+            String text = editTextInput.getText().toString().trim().replaceAll(" +", " ");
             if(text.trim().isEmpty()){
+                textViewResult.setText(R.string.result);
                 Toast.makeText(this, R.string.empty_input, Toast.LENGTH_SHORT).show();
                 return;
             }
