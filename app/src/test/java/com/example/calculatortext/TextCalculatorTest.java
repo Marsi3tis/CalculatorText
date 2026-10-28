@@ -1,6 +1,5 @@
 package com.example.calculatortext;
 import org.junit.Test;
-import org.w3c.dom.Text;
 
 import static org.junit.Assert.assertEquals;
 
