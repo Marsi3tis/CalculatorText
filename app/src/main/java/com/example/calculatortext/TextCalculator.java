@@ -31,7 +31,10 @@ public class TextCalculator {
         for(int i = 0; i < text.length(); i++){
             char character = text.charAt(i);
 
-            if(character == ' ' || character == ',' || character == '.'){
+            if (character == ' ' || character == ',' ||
+                    character == '.' || character == '!' ||
+                    character == '?' || character == ':' ||
+                    character == ';') {
                 count++;
             }
         }
